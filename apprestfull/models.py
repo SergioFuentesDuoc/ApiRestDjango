@@ -26,3 +26,12 @@ class Producto(models.Model):
         return self.idProducto
     class Meta:
     	db_table = 'producto'
+        
+class Usuario(models.Model):
+    id_email    =	models.CharField(primary_key=True,max_length=40)
+    first_name  =	models.CharField(max_length=20)
+    last_name   =	models.CharField(max_length=20)
+    clave       =	models.CharField(max_length=10)
+    grupo_usu   =	models.CharField(max_length=10)
+    estado_usu  = models.IntegerField()
+    fCreacionu  = models.DateTimeField(auto_now_add=True, auto_now=False)
