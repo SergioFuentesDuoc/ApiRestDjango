@@ -23,6 +23,6 @@ class Producto(models.Model):
     fCreacion       = models.DateTimeField(auto_now_add=True, auto_now=False)
 
     def __str__(self):
-        return self.producto
+        return self.idProducto
     class Meta:
     	db_table = 'producto'
