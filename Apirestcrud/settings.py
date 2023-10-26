@@ -147,7 +147,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOWED_ORIGIN_REGEXES = ['http://localhost','http://localhost:8100']
+CORS_ALLOWED_ORIGIN_REGEXES = ['http://localhost','http://localhost:8100','https://localhost:8100','https://localhost:8101', ]
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -157,6 +157,8 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',  # for localhost (Developlemt)
     'http://localhost:8000',  # for network (Development)
     'http://localhost:8100',  # for network (Development)
+    'https://localhost:8100',  # for network (Development)
+    'https://localhost:8101',  # for network (Development)
 )
 
 CSRF_TRUSTED_ORIGINS = [
@@ -164,4 +166,5 @@ CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8080',  # for localhost (Developlemt)
     'http://localhost:8000',  # for network (Development)
     'http://localhost:8100',  # for network (Development)
+    'http://localhost:8101',  # for network (Development)
 ]
