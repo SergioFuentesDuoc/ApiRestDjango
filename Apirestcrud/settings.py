@@ -145,21 +145,23 @@ if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-##CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
-##CORS_ALLOW_CREDENTIALS = True
-##CORS_ALLOWED_ORIGIN_REGEXES = ['http://localhost',]
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGIN_REGEXES = ['http://localhost','http://localhost:8100']
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-##CORS_ORIGIN_WHITELIST = (
-##    'http://localhost:3000',  # for localhost (REACT Default)
-##    'http://localhost:8080',  # for localhost (Developlemt)
-##    'http://localhost:8000',  # for network (Development)
-##)
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',  # for localhost (REACT Default)
+    'http://localhost:8080',  # for localhost (Developlemt)
+    'http://localhost:8000',  # for network (Development)
+    'http://localhost:8100',  # for network (Development)
+)
 
-##CSRF_TRUSTED_ORIGINS = [
-##    'http://localhost:3000',  # for localhost (REACT Default)
-##    'http://localhost:8080',  # for localhost (Developlemt)
-##    'http://localhost:8000',  # for network (Development)
-##]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',  # for localhost (REACT Default)
+    'http://localhost:8080',  # for localhost (Developlemt)
+    'http://localhost:8000',  # for network (Development)
+    'http://localhost:8100',  # for network (Development)
+]
