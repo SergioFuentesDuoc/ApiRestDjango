@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apprestfull',
+    'corsheaders',
     'rest_framework'
 ]
 
@@ -56,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'Apirestcrud.urls'
@@ -121,13 +124,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -145,3 +144,22 @@ if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+##CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+##CORS_ALLOW_CREDENTIALS = True
+##CORS_ALLOWED_ORIGIN_REGEXES = ['http://localhost',]
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
+
+
+##CORS_ORIGIN_WHITELIST = (
+##    'http://localhost:3000',  # for localhost (REACT Default)
+##    'http://localhost:8080',  # for localhost (Developlemt)
+##    'http://localhost:8000',  # for network (Development)
+##)
+
+##CSRF_TRUSTED_ORIGINS = [
+##    'http://localhost:3000',  # for localhost (REACT Default)
+##    'http://localhost:8080',  # for localhost (Developlemt)
+##    'http://localhost:8000',  # for network (Development)
+##]
