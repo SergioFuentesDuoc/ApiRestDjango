@@ -7,6 +7,8 @@ from .api   import ProductoViewSet, UsuarioViewSet,UsuariViewSet, Usuario2ViewSe
 router = DefaultRouter()
 router.register(r'productos', ProductoViewSet)
 router.register(r'usuarios', UsuarioViewSet)
+router.register(r'usuarios1', UsuariViewSet)
+router.register(r'usuarios2', Usuario2ViewSet)
 
 urlpatterns = [
     # Rutas generadas automáticamente por el enrutador de DRF
