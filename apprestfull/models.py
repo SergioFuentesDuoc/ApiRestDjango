@@ -45,3 +45,14 @@ class Usuari(models.Model):
     grupo_usui   =	models.CharField(max_length=10)
     estado_usui  = models.IntegerField()
     fCreacionui  = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+class Usuario2(models.Model):
+    id_correo    = models.AutoField( primary_key=True,db_column='id_correo')
+    id_email2    =	models.CharField(max_length=40)
+    codigo2       = models.CharField(max_length=10)
+    first_name2  =	models.CharField(max_length=20)
+    last_name2   =	models.CharField(max_length=20)
+    clave2       =	models.CharField(max_length=10)
+    grupo_usu2   =	models.CharField(max_length=10)
+    estado_usu2  = models.IntegerField()
+    fCreacionu2  = models.DateTimeField(auto_now_add=True, auto_now=False)
