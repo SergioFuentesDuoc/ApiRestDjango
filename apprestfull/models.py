@@ -35,3 +35,13 @@ class Usuario(models.Model):
     grupo_usu   =	models.CharField(max_length=10)
     estado_usu  = models.IntegerField()
     fCreacionu  = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+class Usuari(models.Model):
+    id_emaili    =	models.CharField(primary_key=True,max_length=40)
+    codigoi       = models.CharField(max_length=10)
+    first_namei  =	models.CharField(max_length=20)
+    last_namei   =	models.CharField(max_length=20)
+    clavei       =	models.CharField(max_length=10)
+    grupo_usui   =	models.CharField(max_length=10)
+    estado_usui  = models.IntegerField()
+    fCreacionui  = models.DateTimeField(auto_now_add=True, auto_now=False)

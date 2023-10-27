@@ -1,12 +1,12 @@
 from django.urls import path, include
 from rest_framework import routers
 from rest_framework.routers import DefaultRouter
-from .api   import ProductoViewSet, UsuarioViewSet
+from .api   import ProductoViewSet, UsuariViewSet
 
 # Crea un enrutador de DRF
 router = DefaultRouter()
 router.register(r'productos', ProductoViewSet)
-router.register(r'usuarios', UsuarioViewSet)
+router.register(r'usuarios', UsuariViewSet)
 
 urlpatterns = [
     # Rutas generadas automáticamente por el enrutador de DRF

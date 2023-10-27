@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Producto, Usuario
+from .models import Producto, Usuario, Usuari
 
 
 class ProductoSerializer(serializers.ModelSerializer):
@@ -13,3 +13,9 @@ class UsuarioSerializer(serializers.ModelSerializer):
         model = Usuario
         fields = ('id_email', 'first_name', 'last_nam','clave', 'grupo_usu', 'fCreacionu')
         read_only_fields = ('fcreacionu',)
+
+class UsuariSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuari
+        fields = ('id_emaili', 'codigoi','first_namei', 'last_nami','clavei', 'grupo_usui', 'fCreacionui')
+        read_only_fields = ('fcreacionui',)
