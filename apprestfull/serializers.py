@@ -17,7 +17,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class UsuariSerializer(serializers.ModelSerializer):
     class Meta:
         model = Usuari
-        fields = ('id_emaili', 'codigoi','first_namei', 'last_namei','clavei', 'grupo_usui', , 'estado_usui','fCreacionui')
+        fields = ('id_emaili', 'codigoi','first_namei', 'last_namei','clavei', 'grupo_usui', 'estado_usui','fCreacionui')
         read_only_fields = ('fCreacionui',)
 
 class Usuario2Serializer(serializers.ModelSerializer):
