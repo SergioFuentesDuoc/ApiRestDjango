@@ -35,6 +35,10 @@ class Usuario(models.Model):
     grupo_usu   =	models.CharField(max_length=10)
     estado_usu  = models.IntegerField()
     fCreacionu  = models.DateTimeField(auto_now_add=True, auto_now=False)
+    def __str__(self):
+        return self.id_email
+    class Meta:
+    	db_table = 'usuario'
 
 class Usuari(models.Model):
     id_emaili    =	models.CharField(primary_key=True,max_length=40)
@@ -45,6 +49,10 @@ class Usuari(models.Model):
     grupo_usui   =	models.CharField(max_length=10)
     estado_usui  = models.IntegerField()
     fCreacionui  = models.DateTimeField(auto_now_add=True, auto_now=False)
+    def __str__(self):
+        return self.id_emaili
+    class Meta:
+    	db_table = 'usuari'
 
 class Usuario2(models.Model):
     id_correo    = models.AutoField( primary_key=True,db_column='id_correo')
@@ -56,3 +64,7 @@ class Usuario2(models.Model):
     grupo_usu2   =	models.CharField(max_length=10)
     estado_usu2  = models.IntegerField()
     fCreacionu2  = models.DateTimeField(auto_now_add=True, auto_now=False)
+    def __str__(self):
+        return self.id_correo
+    class Meta:
+    	db_table = 'usuario2'
