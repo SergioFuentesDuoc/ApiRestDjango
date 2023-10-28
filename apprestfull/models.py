@@ -37,8 +37,7 @@ class Usuario(models.Model):
     fCreacionu  = models.DateTimeField(auto_now_add=True, auto_now=False)
     def __str__(self):
         return self.id_email
-    class Meta:
-    	db_table = 'usuario'
+    
 
 class Usuari(models.Model):
     id_emaili    =	models.CharField(primary_key=True,max_length=40)
@@ -51,8 +50,7 @@ class Usuari(models.Model):
     fCreacionui  = models.DateTimeField(auto_now_add=True, auto_now=False)
     def __str__(self):
         return self.id_emaili
-    class Meta:
-    	db_table = 'usuari'
+    
 
 class Usuario2(models.Model):
     id_correo    = models.AutoField( primary_key=True,db_column='id_correo')
@@ -66,5 +64,4 @@ class Usuario2(models.Model):
     fCreacionu2  = models.DateTimeField(auto_now_add=True, auto_now=False)
     def __str__(self):
         return self.id_correo
-    class Meta:
-    	db_table = 'usuario2'
+    
