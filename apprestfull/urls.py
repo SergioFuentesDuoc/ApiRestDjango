@@ -16,6 +16,6 @@ urlpatterns = [
 ]
 
 # También puedes agregar rutas personalizadas si es necesario
-# urlpatterns += [
-#     path('otra_ruta/', MiVistaPersonalizada.as_view(), name='nombre_ruta_personalizada'),
-# ]
+urlpatterns += [
+     path('api/', Usuario2ViewSet.as_view(), name='usuarios2'),
+ ]
